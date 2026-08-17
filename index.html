@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raza Mehdi — AI Research Scientist</title>
+<meta name="description" content="Raza Mehdi — AI Research Scientist. Deep learning, medical imaging, LLM &amp; RAG systems, and computational biomechanics for healthcare.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  a{color:inherit;text-decoration:none}
+  .panel{display:none;animation:fade .38s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .subpanel{display:none;animation:fade .3s ease}
+  .subpanel.active{display:block}
+  .ent{display:grid;grid-template-columns:3.4rem 1fr;gap:1rem;padding:.75rem 0;align-items:baseline}
+  .ent .t{font-weight:500;font-size:.93rem;line-height:1.42;margin-bottom:.15rem}
+  .mini{font-size:.8rem;font-weight:600;margin:1.2rem 0 .5rem;opacity:.85}
+  .mini:first-child{margin-top:0}
+  .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+  .ment{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:.7rem}
+  .awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:.7rem}
+  .aw{display:flex;gap:.7rem;align-items:flex-start}
+  .aw .ic{font-size:1.15rem;line-height:1.3}
+  .rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:.9rem}
+  .sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.9rem}
+
+  :root{
+    --bg:#0b0708; --bg2:#150e10; --panel:rgba(255,255,255,.04); --panelb:rgba(255,255,255,.09);
+    --text:#f6efe9; --text2:#bda99c; --text3:#8a7468;
+    --a:#ff8a3d; --b:#ff4d6d; --c:#ffc247;
+    --grad:linear-gradient(115deg,#ff8a3d,#ff4d6d 55%,#ffc247);
+    --disp:'Sora',sans-serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15.5px;line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .aurora{position:fixed;inset:0;z-index:-2;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.42;animation:float 20s ease-in-out infinite}
+  .b1{width:540px;height:540px;background:#ff6a2a;top:-180px;left:-140px}
+  .b2{width:420px;height:420px;background:#c31d4e;top:8%;right:-130px;animation-delay:-7s}
+  .b3{width:380px;height:380px;background:#c9861a;top:38%;left:30%;animation-delay:-13s}
+  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(44px,-32px) scale(1.09)}66%{transform:translate(-32px,26px) scale(.94)}}
+  body::after{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% -10%,transparent,rgba(11,7,8,.72) 55%,var(--bg))}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 clamp(1.2rem,5vw,2.2rem)}
+
+  header.top{padding:clamp(3rem,8vw,5rem) 0 clamp(1.6rem,4vw,2.4rem);text-align:center}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;padding:.38rem .85rem;border-radius:999px;border:1px solid var(--panelb);background:var(--panel);color:var(--c);margin-bottom:1.4rem}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  h1{font-family:var(--disp);font-weight:800;font-size:clamp(3rem,11vw,6.4rem);line-height:.92;letter-spacing:-.045em;margin-bottom:.7rem}
+  h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .role{font-family:var(--mono);font-size:clamp(.74rem,2.2vw,.86rem);letter-spacing:.14em;text-transform:uppercase;color:var(--text2);margin-bottom:1.2rem}
+  .sub{font-size:1.02rem;color:var(--text2);max-width:60ch;margin:0 auto 1.6rem;font-weight:300}
+  .sub b{color:var(--text);font-weight:500}
+  .cta{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:500;padding:.66rem 1.15rem;border-radius:11px;border:1px solid var(--panelb);color:var(--text);background:var(--panel);transition:all .2s}
+  .btn:hover{border-color:var(--a);transform:translateY(-2px)}
+  .btn.g{background:var(--grad);border:none;color:#1a0d06;font-weight:700}
+  .qstats{display:flex;gap:1.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem;font-family:var(--mono);font-size:.74rem;color:var(--text3)}
+  .qstats b{font-family:var(--disp);font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;line-height:1.1}
+  .qstats div{text-align:center}
+
+  nav.tabs{position:sticky;top:0;z-index:40;background:rgba(11,7,8,.82);backdrop-filter:blur(14px);border-top:1px solid var(--panelb);border-bottom:1px solid var(--panelb)}
+  .tabrow{display:flex;gap:.3rem;overflow-x:auto;scrollbar-width:none}
+  .tabrow::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;background:none;border:none;cursor:pointer;font-family:var(--disp);font-weight:600;font-size:.86rem;color:var(--text3);padding:1rem .95rem;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
+  .tab:hover{color:var(--text2)}
+  .tab.active{color:var(--text);border-bottom-color:var(--a)}
+
+  main{padding:clamp(2rem,5vw,3rem) 0 4rem;min-height:56vh}
+  h2{font-family:var(--disp);font-weight:700;font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:-.02em;margin-bottom:.5rem}
+  .lede{color:var(--text2);font-weight:300;max-width:64ch;margin-bottom:1.6rem}
+  .subtabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.4rem}
+  .sub{background:var(--panel);border:1px solid var(--panelb);cursor:pointer;color:var(--text2);font-family:var(--sans);font-size:.82rem;font-weight:500;padding:.42rem .8rem;border-radius:9px;display:inline-flex;align-items:center;gap:.4rem;transition:all .18s}
+  .sub:hover{color:var(--text)}
+  .sub.active{background:rgba(255,138,61,.14);border-color:rgba(255,138,61,.45);color:var(--text)}
+  .sub i{font-style:normal;font-family:var(--mono);font-size:.66rem;opacity:.7}
+
+  .ent{border-bottom:1px solid rgba(255,255,255,.06)}
+  .ent .yr{font-family:var(--mono);color:var(--text3);font-size:.8rem}
+  .ent .v{font-size:.8rem;color:var(--text3);line-height:1.45}
+  .tag{font-size:.79rem;padding:.3rem .65rem;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid var(--panelb);color:var(--text2)}
+  .about{display:grid;grid-template-columns:1.5fr 1fr;gap:2rem}
+  .about p{color:var(--text2);margin-bottom:.9rem;font-weight:300}
+  .about p b{color:var(--text);font-weight:500}
+  .glass{background:var(--panel);border:1px solid var(--panelb);border-radius:14px;padding:1rem 1.1rem;margin-bottom:.7rem}
+  .glass .d{font-weight:600;font-size:.92rem}
+  .glass .s{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:var(--mono);font-size:.82rem;margin:.12rem 0}
+  .glass .y{color:var(--text3);font-family:var(--mono);font-size:.76rem}
+  @media(max-width:760px){.about{grid-template-columns:1fr}}
+  .sk-card,.rcard,.mcard{background:var(--panel);border:1px solid var(--panelb);border-radius:14px;padding:1.15rem 1.25rem}
+  .sk-card h3{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:.8rem}
+  .rcard{position:relative;overflow:hidden}
+  .rcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad);opacity:.85}
+  .rcard .num{font-family:var(--mono);font-size:.7rem;color:var(--text3)}
+  .rcard h3{font-family:var(--disp);font-size:1.05rem;font-weight:600;margin:.25rem 0 .45rem}
+  .rcard p{color:var(--text2);font-size:.89rem;font-weight:300;margin-bottom:.7rem}
+  .badges{display:flex;flex-wrap:wrap;gap:.35rem}
+  .badge{font-family:var(--mono);font-size:.66rem;padding:.24rem .55rem;border-radius:6px}
+  .b-a{background:rgba(255,194,71,.14);color:var(--c)}
+  .b-v{background:rgba(255,77,109,.14);color:#ff8fa5}
+  .mcard .n{font-family:var(--disp);font-weight:600;font-size:.93rem}
+  .mcard .w{font-family:var(--mono);font-size:.69rem;color:var(--c);margin-bottom:.35rem}
+  .mcard .tp{font-size:.84rem;color:var(--text2);font-weight:300;margin-bottom:.3rem}
+  .mcard .now{font-family:var(--mono);font-size:.69rem;color:var(--text3)}
+  .aw .t{font-weight:600;font-size:.86rem;line-height:1.35}
+  .aw .o{font-size:.74rem;color:var(--text3);font-family:var(--mono)}
+  .more{margin-top:1.2rem;display:inline-flex;gap:.4rem;color:var(--c);font-family:var(--mono);font-size:.82rem}
+  .contact-box{text-align:center;background:var(--panel);border:1px solid var(--panelb);border-radius:22px;padding:clamp(2rem,5vw,3.2rem)}
+  .contact-box p{color:var(--text2);max-width:48ch;margin:0 auto 1.6rem;font-weight:300}
+  footer{border-top:1px solid var(--panelb);padding:2rem 0;text-align:center;color:var(--text3);font-family:var(--mono);font-size:.74rem}
+</style>
+</head>
+<body>
+<div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="pill"><span class="dot"></span>Open to AI Research Scientist roles · 2026</div>
+    <h1>Raza <span class="g">Mehdi</span></h1>
+    <p class="role">AI Research Scientist · Deep Learning · Medical Imaging · LLM &amp; RAG</p>
+    <p class="sub">Ph.D. candidate turning messy biomedical data into <b>trustworthy, auditable predictions</b> — from cardiac strain maps to pathology reports.</p>
+    <div class="cta">
+      <a class="btn g" href="mailto:razamehdi@tamu.edu">razamehdi@tamu.edu</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=Vg_cwk0AAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a class="btn" href="https://github.com/razamehdi1214" target="_blank">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/raza-mehdi-79b408138/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="qstats">
+      <div><b>27</b>publications</div><div><b>29</b>talks &amp; posters</div>
+      <div><b>6</b>mentored</div><div><b>8</b>awards</div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs"><div class="wrap tabrow">
+  <button class="tab active" data-p="overview" aria-selected="true">Overview</button>
+  <button class="tab" data-p="research">Research</button>
+  <button class="tab" data-p="publications">Publications</button>
+  <button class="tab" data-p="talks">Talks</button>
+  <button class="tab" data-p="service">Teaching &amp; Service</button>
+  <button class="tab" data-p="contact">Contact</button>
+</div></nav>
+
+<main class="wrap" id="stage">
+  <section class="panel active" id="overview">
+    <h2>About</h2>
+    <div class="about">
+      <div>
+          <p>I'm a final-year <b>Ph.D. candidate in Biomedical Engineering</b> at Texas A&amp;M University, in the Computational Cardiovascular Bioengineering Laboratory. My research fuses <b>deep learning, medical imaging, LLM systems, and computational biomechanics</b>.</p>
+          <p>I turn complex biomedical data into actionable diagnostics — predicting infarct location from cardiac strain, inferring tissue mechanics from hemodynamics, and mapping pathology reports to standardized oncology codes. I combine physics-based simulation with modern AI: UNets, transformers, physics-informed neural networks, and ontology-aware RAG agents.</p>
+          <p>I'm seeking <b>AI Research Scientist</b> roles across medical AI, LLM systems, and computational biology — where rigorous science meets patient impact.</p>
+        <h4 class="mini">Technical stack</h4>
+        <div class="sk">
+          <div class="sk-card"><h3>Deep Learning &amp; AI</h3><div class="tags"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Transformers</span><span class="tag">UNets</span><span class="tag">PINNs</span><span class="tag">GNNs</span><span class="tag">CNNs</span><span class="tag">Representation Learning</span></div></div>
+          <div class="sk-card"><h3>LLMs &amp; Agentic AI</h3><div class="tags"><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">Agentic AI</span><span class="tag">FAISS</span><span class="tag">Embeddings</span><span class="tag">Clinical NLP</span><span class="tag">Hugging Face</span></div></div>
+          <div class="sk-card"><h3>Simulation &amp; Modeling</h3><div class="tags"><span class="tag">Finite Element (Abaqus)</span><span class="tag">CFD / FSI</span><span class="tag">Inverse Problems</span><span class="tag">Surrogate Modeling</span><span class="tag">Uncertainty Quantification</span></div></div>
+          <div class="sk-card"><h3>Engineering &amp; Domain</h3><div class="tags"><span class="tag">Cardiac MRI / CT</span><span class="tag">3D Medical Imaging</span><span class="tag">Multi-GPU</span><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Git · Linux · HPC</span></div></div>
+        </div>
+      </div>
+      <div>
+          <div class="glass"><div class="d">Ph.D., Biomedical Engineering</div><div class="s">Texas A&amp;M University</div><div class="y">2022–2026 · College Station, TX</div></div>
+          <div class="glass"><div class="d">M.Sc., Mechanical Engineering</div><div class="s">Sejong University</div><div class="y">2019–2021 · Seoul, South Korea</div></div>
+          <div class="glass"><div class="d">B.Sc., Mechanical Engineering</div><div class="s">UET Lahore</div><div class="y">2014–2018 · Lahore, Pakistan</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="research">
+    <h2>Research</h2>
+    <p class="lede">Six threads where physics-based simulation and modern AI meet clinical data.</p>
+    <div class="rgrid">
+          <div class="rcard"><div class="num">01</div><h3>Multi-fidelity deep learning for myocardial infarction</h3><p>A UNet combining large-scale simulated rodent-heart data with scarce human MRI labels to predict infarct location from left-ventricular strain — accurate scar detection without LGE imaging.</p><div class="badges"><span class="badge b-a">Advanced Science 2025</span><span class="badge b-v">PyTorch · UNet · Transfer Learning</span></div></div>
+          <div class="rcard"><div class="num">02</div><h3>Physics-informed neural networks for cardiac mechanics</h3><p>A PINN embedding hyperelastic laws to predict myocardial stress–strain and infer tissue parameters — perfect three-way separation of healthy, mild, and severe pulmonary hypertension.</p><div class="badges"><span class="badge b-a">Under review</span><span class="badge b-v">PINNs · Inverse Problems · FEM</span></div></div>
+          <div class="rcard"><div class="num">03</div><h3>OncoTree code prediction via ontology-aware RAG</h3><p>An end-to-end LLM/agentic pipeline mapping free-text hematopathology reports to standardized OncoTree codes — FAISS retrieval, hierarchy-aware expansion, and a constrained LLM agent with confidence, evidence, and review flags.</p><div class="badges"><span class="badge b-a">Clinical AI prototype</span><span class="badge b-v">RAG · LLM Agent · Streamlit</span></div></div>
+          <div class="rcard"><div class="num">04</div><h3>LLMSurv — explainable survival modeling</h3><p>An LLM-based explainable deep survival model over the UNOS lung-transplant dataset (25,000+ records, 73 features), pairing survival analysis with SHAP for interpretable risk factors.</p><div class="badges"><span class="badge b-a">Under review</span><span class="badge b-v">LLMs · Survival · SHAP</span></div></div>
+          <div class="rcard"><div class="num">05</div><h3>Spatio-temporal GNN for cardiac stiffness</h3><p>Non-invasive estimation of collagen microstructure and its contribution to cardiac stiffness from imaging-derived motion, using a spatio-temporal graph neural network.</p><div class="badges"><span class="badge b-a">Revision submitted</span><span class="badge b-v">GNNs · Medical Imaging</span></div></div>
+          <div class="rcard"><div class="num">06</div><h3>Non-invasive pulmonary artery pressure estimation</h3><p>Segmenting pulmonary vessels from high-resolution CT and training a physics-informed surrogate on CT features + FSI pressures to predict distal pressures without full simulation.</p><div class="badges"><span class="badge b-a">In preparation</span><span class="badge b-v">CT Segmentation · FSI · Transformer</span></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="publications">
+    <h2>Publications</h2>
+    <p class="lede">10 journal articles · 11 peer-reviewed conference papers · 5 abstracts · 1 book chapter.</p>
+        <div class="subtabs" role="tablist">
+          <button class="sub active" data-s="p-j">Journal articles <i>10</i></button>
+          <button class="sub" data-s="p-c">Conference papers <i>11</i></button>
+          <button class="sub" data-s="p-a">Abstracts <i>5</i></button>
+          <button class="sub" data-s="p-b">Book chapter <i>1</i></button>
+        </div>
+        <div class="subpanel active" id="p-j">
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Non-invasive diagnosis of chronic myocardial infarction via composite in-silico–human data learning</div><div class="v">Advanced Science, e06933</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Right ventricular stiffening and anisotropy alterations in pulmonary hypertension</div><div class="v">Journal of the American Heart Association, 14(5):e037126</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">In-silico heart model phantom to validate cardiac strain imaging</div><div class="v">Computers in Biology and Medicine, 181:109065</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Machine learning-based classification of cardiac relaxation impairment using sarcomere length and intracellular calcium transients</div><div class="v">Computers in Biology and Medicine, 163:107134</div></div></div>
+          <div class="ent"><div class="yr">2021</div><div><div class="t">Determination of third-order elastic constants using change of cross-sectional resonance frequencies by acoustoelastic effect</div><div class="v">Journal of Applied Physics, 130(23)</div></div></div>
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Estimating full stress–strain behavior of cardiac tissues in vivo using physics-informed neural networks</div><div class="v">Revision submitted</div></div></div>
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Non-invasive estimation of collagen microstructure and its contribution to cardiac stiffness using a spatio-temporal graph neural network</div><div class="v">Revision submitted</div></div></div>
+          <div class="ent"><div class="yr">2026</div><div><div class="t">LLMSurv: an explainable deep survival model for post–lung-transplant survival prediction</div><div class="v">Submitted</div></div></div>
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Non-invasive estimation of pulmonary vasculature pressure via 1D FSI and a transformer model</div><div class="v">In advanced preparation</div></div></div>
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Echocardiography-driven AI model to predict ventricular–arterial coupling</div><div class="v">In advanced preparation</div></div></div>
+        </div>
+        <div class="subpanel" id="p-c">
+          <div class="ent"><div class="yr">2026</div><div><div class="t">ML prediction of cardiovascular disease in the Jackson Heart Study using clinical data, social determinants, and SHAP-based explanations</div><div class="v">IEEE EMBC 2026 · Toronto, Canada</div></div></div>
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Sensitivity of principal strains to myofiber architecture in the MI region</div><div class="v">IEEE EMBC 2026 · Toronto, Canada</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Human-guided feature selection for accurate cardiomyocyte dysfunction classification</div><div class="v">IEEE EMBC 2025 · Copenhagen, Denmark</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Towards non-invasive estimation of myocardial scar stiffness from cardiac strains using deep learning</div><div class="v">FIMH 2025 · Dallas, TX, USA</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Intracardiac hemodynamics alteration in myocardial infarction</div><div class="v">FIMH 2025 · Dallas, TX, USA</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Effects of scar architecture on cardiac strains in myocardial infarction</div><div class="v">SPIE Medical Imaging 2025, vol. 13408</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Estimating pulmonary arterial pressure differences using integrated ML–CFD</div><div class="v">Computing in Cardiology (CinC) 2024, vol. 51</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Does EDPVR represent myocardial tissue stiffness? Toward a better definition</div><div class="v">IEEE EMBC 2024 · Orlando, FL, USA</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">On in-silico estimation of LV end-diastolic pressure from cardiac strains</div><div class="v">IEEE EMBC 2024 · Orlando, FL, USA</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Multi-material cardiac sleeves with variable stiffness enhance regional strain markers</div><div class="v">IEEE EMBC 2024 · Orlando, FL, USA</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">On the possibility of estimating myocardial fiber architecture from cardiac strains</div><div class="v">FIMH 2023, pp. 74–83 · Lyon, France</div></div></div>
+        </div>
+        <div class="subpanel" id="p-a">
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Impact of MI severity on biomechanical remodeling of the left ventricle</div><div class="v">Circulation Research, 137(Suppl 1)</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Role of LV anisotropy in the outcome of myocardial infarction: a rodent model</div><div class="v">Circulation, 150(Suppl 1)</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Viscoelastic remodeling of the LV myocardium in myocardial infarction</div><div class="v">Circulation Research, 135(Suppl 1)</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Contractile adaptation of the RV myocardium in pulmonary hypertension</div><div class="v">Circulation Research, 133(Suppl 1)</div></div></div>
+          <div class="ent"><div class="yr">2021</div><div><div class="t">Acoustoelasticity-based measurement of third-order elastic constants considering temperature effect</div><div class="v">KSME Spring/Autumn Conference</div></div></div>
+        </div>
+        <div class="subpanel" id="p-b">
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Comparison of three machine learning methods to estimate myocardial stiffness</div><div class="v">Reduced Order Models for the Biomechanics of Living Organs, pp. 363–382 · Academic Press</div></div></div>
+        </div>
+    <a class="more" href="https://scholar.google.com/citations?user=Vg_cwk0AAAAJ&hl=en" target="_blank">$ view all on Google Scholar →</a>
+  </section>
+
+  <section class="panel" id="talks">
+    <h2>Presentations &amp; talks</h2>
+    <p class="lede">29 conference presentations &mdash; 14 oral, 13 poster, and 2 invited seminars &mdash; delivered across Canada, Denmark, France, South Korea, and the United States.</p>
+        <div class="subtabs" role="tablist">
+          <button class="sub active" data-s="t-i">Invited talks <i>2</i></button>
+          <button class="sub" data-s="t-o">Oral <i>14</i></button>
+          <button class="sub" data-s="t-p">Posters <i>13</i></button>
+          <button class="sub" data-s="t-v">Cities</button>
+        </div>
+        <div class="subpanel active" id="t-i">
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Invited talk at the 2026 SIAM Conference on the Life Sciences</div><div class="v">SIAM Conference on the Life Sciences · travel award recipient · upcoming</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">DeepInfarct: in-silico trained UNet-based identification of infarcted myocardium from strain imaging</div><div class="v">Machine Learning + X Seminar Series, CRUNCH Group, Division of Applied Mathematics, Brown University · December 2023</div></div></div>
+        </div>
+        <div class="subpanel" id="t-o">
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Non-invasive estimation of pulmonary vascular pressure using in-vivo imaging, in-silico modeling, and physics-informed neural networks</div><div class="v">10th World Congress of Biomechanics · Vancouver, Canada · July 2026</div></div></div>
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Machine learning prediction of cardiovascular disease in the Jackson Heart Study using clinical data, social determinants, and SHAP-based model explanations</div><div class="v">48th IEEE EMBC · Toronto, Canada · July 2026</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">In-vivo estimation of right ventricular biomechanics from hemodynamic data using a physics-informed neural network approach</div><div class="v">BMES Annual Meeting · San Diego, CA, USA · October 2025</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Predicting right ventricle growth and fiber remodeling in pulmonary hypertension using a multilayer perceptron model</div><div class="v">BMES Annual Meeting · San Diego, CA, USA · October 2025 · presenter</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">From myocardial infarction to heart failure: role of tissue anisotropy and its prediction through a probabilistic neural network</div><div class="v">BMES Annual Meeting · San Diego, CA, USA · October 2025 · presenter</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Estimating pressure of pulmonary vasculature by combining patient-specific CFD simulations and physiological variables using machine learning</div><div class="v">BMES Annual Meeting · Baltimore, MD, USA · October 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Deep learning-based biomechanical characterization of infarcted myocardium from strain imaging</div><div class="v">Summer Biomechanics, Bioengineering and Biotransport Conference (SB3C) · Lake Geneva, WI, USA · June 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Artificial-intelligence-assisted multiscale lung modeling to predict alveolar septal wall stress</div><div class="v">Summer Biomechanics, Bioengineering and Biotransport Conference (SB3C) · Lake Geneva, WI, USA · June 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Optimal design of experiments for nuclear membrane stiffness estimation</div><div class="v">Summer Biomechanics, Bioengineering and Biotransport Conference (SB3C) · Lake Geneva, WI, USA · June 2024</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Machine learning model to identify size, location, and stiffness of cardiac scar in myocardial infarction using cardiac strains</div><div class="v">17th U.S. National Congress on Computational Mechanics · Albuquerque, NM, USA · July 2023</div></div></div>
+          <div class="ent"><div class="yr">2022</div><div><div class="t">A machine learning method to estimate relaxation velocity from calcium kinetics in cardiomyocytes</div><div class="v">BMES Annual Meeting · San Antonio, TX, USA · October 2022</div></div></div>
+          <div class="ent"><div class="yr">2022</div><div><div class="t">A machine learning model to identify the size and location of cardiac scar in myocardial infarction using cardiac strains</div><div class="v">Society of Engineering Science Annual Meeting · College Station, TX, USA · October 2022</div></div></div>
+          <div class="ent"><div class="yr">2022</div><div><div class="t">A deep learning method to estimate myocardial stiffness and collagen undulation</div><div class="v">Society of Engineering Science Annual Meeting · College Station, TX, USA · October 2022</div></div></div>
+          <div class="ent"><div class="yr">2021</div><div><div class="t">Acoustoelasticity-based measurement of third-order elastic constants considering temperature effect</div><div class="v">Korean Society of Mechanical Engineers Spring and Autumn Conference · Jeju Island, South Korea · August 2021</div></div></div>
+        </div>
+        <div class="subpanel" id="t-p">
+          <div class="ent"><div class="yr">2026</div><div><div class="t">Sensitivity of principal strains to myofiber architecture in the myocardial infarcted region</div><div class="v">48th IEEE EMBC · Toronto, Canada · July 2026</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Towards non-invasive estimation of myocardial scar stiffness from cardiac strains using deep learning</div><div class="v">Functional Imaging and Modeling of the Heart (FIMH) · Dallas, TX, USA · 2025</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Intracardiac hemodynamics alteration in myocardial infarction</div><div class="v">Functional Imaging and Modeling of the Heart (FIMH) · Dallas, TX, USA · 2025</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Does EDPVR represent myocardial tissue stiffness? Toward a better definition</div><div class="v">46th IEEE EMBC · Orlando, FL, USA · July 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">On in-silico estimation of left ventricular end-diastolic pressure from cardiac strains</div><div class="v">46th IEEE EMBC · Orlando, FL, USA · July 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Multi-material cardiac sleeves with variable stiffness enhance regional strain markers</div><div class="v">46th IEEE EMBC · Orlando, FL, USA · July 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Multi-fidelity deep learning approach to delineate infarcted myocardium using cardiac strains in lieu of LGE imaging</div><div class="v">8th Annual Cardiovascular Bioengineering (CVBE) Symposium · Houston, TX, USA · May 2024</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">The estimation of size and location of myocardial infarction using a deep learning approach</div><div class="v">BMES Annual Meeting · Seattle, WA, USA · October 2023</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Estimation of volume of the right ventricle from the endocardium area of CMR slices using a recurrent neural network</div><div class="v">BMES Annual Meeting · Seattle, WA, USA · October 2023</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Contractile adaptation of the right ventricular myocardium in pulmonary hypertension</div><div class="v">AHA BCVS Scientific Sessions · Boston, MA, USA · August 2023</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">On the possibility of estimating myocardial fiber architecture from cardiac strains</div><div class="v">Functional Imaging and Modeling of the Heart (FIMH) · Lyon, France · June 2023</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">A machine learning approach to estimate size and location of myocardial infarction</div><div class="v">Summer Biomechanics, Bioengineering and Biotransport Conference (SB3C) · Vail, CO, USA · June 2023</div></div></div>
+          <div class="ent"><div class="yr">2022</div><div><div class="t">Estimation of myocardial mechanical properties by a deep learning approach</div><div class="v">BMES Annual Meeting · San Antonio, TX, USA · October 2022</div></div></div>
+        </div>
+        <div class="subpanel" id="t-v">
+          <div class="tags"><span class="tag">Vancouver, Canada</span><span class="tag">Toronto, Canada</span><span class="tag">Copenhagen, Denmark</span><span class="tag">Lyon, France</span><span class="tag">Jeju Island, South Korea</span><span class="tag">San Diego, CA</span><span class="tag">Baltimore, MD</span><span class="tag">Seattle, WA</span><span class="tag">Boston, MA</span><span class="tag">Orlando, FL</span><span class="tag">Dallas, TX</span><span class="tag">Houston, TX</span><span class="tag">San Antonio, TX</span><span class="tag">College Station, TX</span><span class="tag">Albuquerque, NM</span><span class="tag">Lake Geneva, WI</span><span class="tag">Vail, CO</span><span class="tag">Providence, RI (virtual)</span></div>
+        </div>
+  </section>
+
+  <section class="panel" id="service">
+    <h2>Teaching, mentoring &amp; service</h2>
+    <p class="lede">Six master's students mentored, two EMBC sessions chaired, three courses taught, and peer review for seven journals.</p>
+        <div class="subtabs" role="tablist">
+          <button class="sub active" data-s="s-m">Mentoring <i>6</i></button>
+          <button class="sub" data-s="s-c">Session chair <i>2</i></button>
+          <button class="sub" data-s="s-t">Teaching <i>3</i></button>
+          <button class="sub" data-s="s-r">Peer review</button>
+          <button class="sub" data-s="s-a">Awards <i>8</i></button>
+        </div>
+        <div class="subpanel active" id="s-m">
+          <div class="ment">
+          <div class="mcard"><div class="n">Agastya Todi</div><div class="w">Aug 2025 – present</div><div class="tp">Machine learning prediction of cardiovascular disease in the Jackson Heart Study</div><div class="now">Now: M.S. student, Computer Science, TAMU</div></div>
+          <div class="mcard"><div class="n">Sukanya Sahoo</div><div class="w">Jan 2025 – Aug 2025</div><div class="tp">Hemodynamic simulations of the pulmonary artery</div><div class="now">Now: M.S. student, Computer Science, TAMU</div></div>
+          <div class="mcard"><div class="n">Ruthvik Kanumuri</div><div class="w">Aug 2024 – Jul 2025</div><div class="tp">Deep learning to predict right ventricular volume and mass fraction</div><div class="now">Now: AI Engineer, Innovare</div></div>
+          <div class="mcard"><div class="n">Vatsa Arvind Kala</div><div class="w">Dec 2024 – May 2025</div><div class="tp">LLM-based explainable deep survival modeling for post–lung-transplant outcomes (UNOS)</div><div class="now">Now: M.S. student, Information &amp; Operations Management, TAMU</div></div>
+          <div class="mcard"><div class="n">Nandhini Manikandan</div><div class="w">Jan 2023 – Oct 2023</div><div class="tp">Augmented synthetic heart dataset library for cardiovascular ML models</div><div class="now">Now: Ph.D. student, Mechanical Engineering, TAMU</div></div>
+          <div class="mcard"><div class="n">Romaanchan Skanda</div><div class="w">Dec 2023 – Mar 2024</div><div class="tp">Anatomical feature estimation of the right ventricle from physics-based simulations</div><div class="now">Now: Software Engineer, Dell</div></div>
+          </div>
+        </div>
+        <div class="subpanel" id="s-c">
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Session Chair — Imaging Technology</div><div class="v">46th International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC) · Orlando, FL, USA · July 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Session Co-Chair — MRI Processing</div><div class="v">46th International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC) · Orlando, FL, USA · July 2024</div></div></div>
+        </div>
+        <div class="subpanel" id="s-t">
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Teaching Assistant — Biomechanics Lab (BMEN 361)</div><div class="v">Texas A&amp;M University · Fall 2024</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">Instructional Assistant — Soft Tissue Biomechanics (BMEN 463/663)</div><div class="v">Texas A&amp;M University · Spring 2024</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Teaching Assistant — Biomaterials Lab (BMEN 345)</div><div class="v">Texas A&amp;M University · Spring 2023</div></div></div>
+        </div>
+        <div class="subpanel" id="s-r">
+          <h4 class="mini">Journal peer review</h4><div class="tags"><span class="tag">Scientific Reports</span><span class="tag">Journal of Biomechanics</span><span class="tag">Computer Methods and Programs in Biomedicine</span><span class="tag">Heliyon</span><span class="tag">Computers in Biology and Medicine</span><span class="tag">Biomedical Signal Processing and Control</span><span class="tag">Engineering Applications of Artificial Intelligence</span></div>
+          <h4 class="mini">Conference paper review</h4><div class="tags"><span class="tag">ASME Summer Bioengineering Conference (SBC)</span><span class="tag">IEEE International Symposium on Biomedical Imaging (ISBI)</span></div>
+          <h4 class="mini">Professional affiliations</h4><div class="tags"><span class="tag">BMES</span><span class="tag">IEEE EMBS</span><span class="tag">AHA — BCVS Council</span><span class="tag">AHA — CVRI Council</span><span class="tag">ASME</span><span class="tag">USACM</span><span class="tag">FIMH</span><span class="tag">SES</span></div>
+        </div>
+        <div class="subpanel" id="s-a">
+          <div class="awards">
+          <div class="aw"><div class="ic">🎤</div><div><div class="t">Invited-talk travel award, SIAM Conference on the Life Sciences</div><div class="o">2026</div></div></div>
+          <div class="aw"><div class="ic">🏆</div><div><div class="t">AHA Predoctoral Fellowship (25PRE1377496)</div><div class="o">American Heart Association · 2025–2026</div></div></div>
+          <div class="aw"><div class="ic">✈️</div><div><div class="t">GREAT Fellowship</div><div class="o">Texas A&amp;M University · 2025–2026</div></div></div>
+          <div class="aw"><div class="ic">🎓</div><div><div class="t">Hagler Doctoral Fellowship</div><div class="o">Hagler Institute for Advanced Study · 2025</div></div></div>
+          <div class="aw"><div class="ic">📜</div><div><div class="t">Competitive Scholarship Non-Resident Tuition Waiver</div><div class="o">Texas A&amp;M University · 2024–2025</div></div></div>
+          <div class="aw"><div class="ic">🥇</div><div><div class="t">Student Paper Competition Finalist</div><div class="o">SB3C · Lake Geneva, WI · 2024</div></div></div>
+          <div class="aw"><div class="ic">🥈</div><div><div class="t">Runner-up, Best Oral Presentation</div><div class="o">SB3C · Lake Geneva, WI · 2024</div></div></div>
+          <div class="aw"><div class="ic">🏅</div><div><div class="t">Best Abstract Award</div><div class="o">8th CVBE Symposium, Houston Methodist · 2024</div></div></div>
+          </div>
+        </div>
+  </section>
+
+  <section class="panel" id="contact">
+    <div class="contact-box">
+      <h2>Let's build something that matters.</h2>
+      <p>Open to AI Research Scientist roles in medical AI, computational biology, and healthcare technology — industry, national labs, and research teams.</p>
+      <div class="cta">
+        <a class="btn g" href="mailto:razamehdi@tamu.edu">razamehdi@tamu.edu</a>
+        <a class="btn" href="https://www.linkedin.com/in/raza-mehdi-79b408138/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/razamehdi1214" target="_blank">GitHub</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=Vg_cwk0AAAAJ&hl=en" target="_blank">Scholar</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Raza Mehdi · College Station, TX</footer>
+<script>const STAGE_OFFSET=64;</script>
+<script>
+  function show(id){
+    document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));
+    document.querySelectorAll('.tab').forEach(t=>{
+      const on=t.dataset.p===id; t.classList.toggle('active',on); t.setAttribute('aria-selected',on);
+    });
+    if(history.replaceState) history.replaceState(null,'','#'+id); else location.hash=id;
+    const st=document.getElementById('stage');
+    if(st){const y=st.getBoundingClientRect().top+window.scrollY-STAGE_OFFSET;
+      if(window.scrollY>y) window.scrollTo({top:y,behavior:'smooth'});}
+  }
+  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>show(t.dataset.p)));
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('.sub'); if(!b) return;
+    const wrap=b.closest('.panel');
+    wrap.querySelectorAll('.sub').forEach(s=>s.classList.toggle('active',s===b));
+    wrap.querySelectorAll('.subpanel').forEach(p=>p.classList.toggle('active',p.id===b.dataset.s));
+  });
+  const start=location.hash.replace('#','');
+  if(start&&document.getElementById(start)&&document.getElementById(start).classList.contains('panel')) show(start);
+  window.addEventListener('hashchange',()=>{const h=location.hash.replace('#','');
+    const el=document.getElementById(h); if(el&&el.classList.contains('panel')) show(h);});
+</script>
+</body>
+</html>
