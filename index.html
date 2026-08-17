@@ -31,25 +31,25 @@
   .sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.9rem}
 
   :root{
-    --bg:#0b0708; --bg2:#150e10; --panel:rgba(255,255,255,.04); --panelb:rgba(255,255,255,.09);
-    --text:#f6efe9; --text2:#bda99c; --text3:#8a7468;
-    --a:#ff8a3d; --b:#ff4d6d; --c:#ffc247;
-    --grad:linear-gradient(115deg,#ff8a3d,#ff4d6d 55%,#ffc247);
+    --bg:#050a12; --bg2:#0a1120; --panel:rgba(255,255,255,.038); --panelb:rgba(255,255,255,.09);
+    --text:#e9f1fb; --text2:#93a4bd; --text3:#5d6e88;
+    --a:#00e0a4; --b:#3b82f6; --c:#8b5cf6;
+    --grad:linear-gradient(125deg,#00e0a4,#3b82f6 60%,#8b5cf6);
     --disp:'Sora',sans-serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
   }
   body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15.5px;line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   .aurora{position:fixed;inset:0;z-index:-2;overflow:hidden}
-  .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.42;animation:float 20s ease-in-out infinite}
-  .b1{width:540px;height:540px;background:#ff6a2a;top:-180px;left:-140px}
-  .b2{width:420px;height:420px;background:#c31d4e;top:8%;right:-130px;animation-delay:-7s}
-  .b3{width:380px;height:380px;background:#c9861a;top:38%;left:30%;animation-delay:-13s}
+  .blob{position:absolute;border-radius:50%;filter:blur(105px);opacity:.4;animation:float 22s ease-in-out infinite}
+  .b1{width:540px;height:540px;background:#0b8f6d;top:-180px;left:-140px}
+  .b2{width:440px;height:440px;background:#1d4ed8;top:8%;right:-130px;animation-delay:-8s}
+  .b3{width:400px;height:400px;background:#6d28d9;top:38%;left:30%;animation-delay:-14s}
   @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(44px,-32px) scale(1.09)}66%{transform:translate(-32px,26px) scale(.94)}}
-  body::after{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% -10%,transparent,rgba(11,7,8,.72) 55%,var(--bg))}
+  body::after{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% -10%,transparent,rgba(5,10,18,.72) 55%,var(--bg))}
   .wrap{max-width:1020px;margin:0 auto;padding:0 clamp(1.2rem,5vw,2.2rem)}
 
   header.top{padding:clamp(3rem,8vw,5rem) 0 clamp(1.6rem,4vw,2.4rem);text-align:center}
-  .pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;padding:.38rem .85rem;border-radius:999px;border:1px solid var(--panelb);background:var(--panel);color:var(--c);margin-bottom:1.4rem}
-  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c);animation:pulse 2s infinite}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;padding:.38rem .85rem;border-radius:999px;border:1px solid var(--panelb);background:var(--panel);color:var(--a);margin-bottom:1.4rem}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a);animation:pulse 2s infinite}
   @keyframes pulse{50%{opacity:.35}}
   h1{font-family:var(--disp);font-weight:800;font-size:clamp(3rem,11vw,6.4rem);line-height:.92;letter-spacing:-.045em;margin-bottom:.7rem}
   h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -59,7 +59,7 @@
   .cta{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
   .btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:500;padding:.66rem 1.15rem;border-radius:11px;border:1px solid var(--panelb);color:var(--text);background:var(--panel);transition:all .2s}
   .btn:hover{border-color:var(--a);transform:translateY(-2px)}
-  .btn.g{background:var(--grad);border:none;color:#1a0d06;font-weight:700}
+  .btn.g{background:var(--grad);border:none;color:#04121a;font-weight:700}
   .qstats{display:flex;gap:1.6rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem;font-family:var(--mono);font-size:.74rem;color:var(--text3)}
   .qstats b{font-family:var(--disp);font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;line-height:1.1}
   .qstats div{text-align:center}
@@ -77,7 +77,7 @@
   .subtabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.4rem}
   .sub{background:var(--panel);border:1px solid var(--panelb);cursor:pointer;color:var(--text2);font-family:var(--sans);font-size:.82rem;font-weight:500;padding:.42rem .8rem;border-radius:9px;display:inline-flex;align-items:center;gap:.4rem;transition:all .18s}
   .sub:hover{color:var(--text)}
-  .sub.active{background:rgba(255,138,61,.14);border-color:rgba(255,138,61,.45);color:var(--text)}
+  .sub.active{background:rgba(0,224,164,.13);border-color:rgba(0,224,164,.42);color:var(--text)}
   .sub i{font-style:normal;font-family:var(--mono);font-size:.66rem;opacity:.7}
 
   .ent{border-bottom:1px solid rgba(255,255,255,.06)}
@@ -93,7 +93,7 @@
   .glass .y{color:var(--text3);font-family:var(--mono);font-size:.76rem}
   @media(max-width:760px){.about{grid-template-columns:1fr}}
   .sk-card,.rcard,.mcard{background:var(--panel);border:1px solid var(--panelb);border-radius:14px;padding:1.15rem 1.25rem}
-  .sk-card h3{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c);margin-bottom:.8rem}
+  .sk-card h3{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--a);margin-bottom:.8rem}
   .rcard{position:relative;overflow:hidden}
   .rcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad);opacity:.85}
   .rcard .num{font-family:var(--mono);font-size:.7rem;color:var(--text3)}
@@ -101,15 +101,15 @@
   .rcard p{color:var(--text2);font-size:.89rem;font-weight:300;margin-bottom:.7rem}
   .badges{display:flex;flex-wrap:wrap;gap:.35rem}
   .badge{font-family:var(--mono);font-size:.66rem;padding:.24rem .55rem;border-radius:6px}
-  .b-a{background:rgba(255,194,71,.14);color:var(--c)}
-  .b-v{background:rgba(255,77,109,.14);color:#ff8fa5}
+  .b-a{background:rgba(0,224,164,.13);color:var(--a)}
+  .b-v{background:rgba(139,92,246,.16);color:#c4b0ff}
   .mcard .n{font-family:var(--disp);font-weight:600;font-size:.93rem}
-  .mcard .w{font-family:var(--mono);font-size:.69rem;color:var(--c);margin-bottom:.35rem}
+  .mcard .w{font-family:var(--mono);font-size:.69rem;color:var(--a);margin-bottom:.35rem}
   .mcard .tp{font-size:.84rem;color:var(--text2);font-weight:300;margin-bottom:.3rem}
   .mcard .now{font-family:var(--mono);font-size:.69rem;color:var(--text3)}
   .aw .t{font-weight:600;font-size:.86rem;line-height:1.35}
   .aw .o{font-size:.74rem;color:var(--text3);font-family:var(--mono)}
-  .more{margin-top:1.2rem;display:inline-flex;gap:.4rem;color:var(--c);font-family:var(--mono);font-size:.82rem}
+  .more{margin-top:1.2rem;display:inline-flex;gap:.4rem;color:var(--a);font-family:var(--mono);font-size:.82rem}
   .contact-box{text-align:center;background:var(--panel);border:1px solid var(--panelb);border-radius:22px;padding:clamp(2rem,5vw,3.2rem)}
   .contact-box p{color:var(--text2);max-width:48ch;margin:0 auto 1.6rem;font-weight:300}
   footer{border-top:1px solid var(--panelb);padding:2rem 0;text-align:center;color:var(--text3);font-family:var(--mono);font-size:.74rem}
@@ -123,7 +123,7 @@
     <div class="pill"><span class="dot"></span>Open to AI Research Scientist roles · 2026</div>
     <h1>Raza <span class="g">Mehdi</span></h1>
     <p class="role">AI Research Scientist · Deep Learning · Medical Imaging · LLM &amp; RAG</p>
-    <p class="sub">Ph.D. candidate turning messy biomedical data into <b>trustworthy, auditable predictions</b> — from cardiac strain maps to pathology reports.</p>
+    <p class="sub">Final-year Ph.D. candidate fusing <b>medical imaging, physics-based simulation, and deep learning</b> — building models that estimate non-invasively what today takes a catheter, and show their reasoning along the way.</p>
     <div class="cta">
       <a class="btn g" href="mailto:razamehdi@tamu.edu">razamehdi@tamu.edu</a>
       <a class="btn" href="https://scholar.google.com/citations?user=Vg_cwk0AAAAJ&hl=en" target="_blank">Google Scholar</a>
@@ -193,11 +193,11 @@
           <button class="sub" data-s="p-b">Book chapter <i>1</i></button>
         </div>
         <div class="subpanel active" id="p-j">
-          <div class="ent"><div class="yr">2025</div><div><div class="t">Non-invasive diagnosis of chronic myocardial infarction via composite in-silico–human data learning</div><div class="v">Advanced Science, e06933</div></div></div>
-          <div class="ent"><div class="yr">2025</div><div><div class="t">Right ventricular stiffening and anisotropy alterations in pulmonary hypertension</div><div class="v">Journal of the American Heart Association, 14(5):e037126</div></div></div>
-          <div class="ent"><div class="yr">2024</div><div><div class="t">In-silico heart model phantom to validate cardiac strain imaging</div><div class="v">Computers in Biology and Medicine, 181:109065</div></div></div>
-          <div class="ent"><div class="yr">2023</div><div><div class="t">Machine learning-based classification of cardiac relaxation impairment using sarcomere length and intracellular calcium transients</div><div class="v">Computers in Biology and Medicine, 163:107134</div></div></div>
-          <div class="ent"><div class="yr">2021</div><div><div class="t">Determination of third-order elastic constants using change of cross-sectional resonance frequencies by acoustoelastic effect</div><div class="v">Journal of Applied Physics, 130(23)</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Non-invasive diagnosis of chronic myocardial infarction via composite in-silico–human data learning</div><div class="v">Advanced Science</div></div></div>
+          <div class="ent"><div class="yr">2025</div><div><div class="t">Right ventricular stiffening and anisotropy alterations in pulmonary hypertension</div><div class="v">Journal of the American Heart Association</div></div></div>
+          <div class="ent"><div class="yr">2024</div><div><div class="t">In-silico heart model phantom to validate cardiac strain imaging</div><div class="v">Computers in Biology and Medicine</div></div></div>
+          <div class="ent"><div class="yr">2023</div><div><div class="t">Machine learning-based classification of cardiac relaxation impairment using sarcomere length and intracellular calcium transients</div><div class="v">Computers in Biology and Medicine</div></div></div>
+          <div class="ent"><div class="yr">2021</div><div><div class="t">Determination of third-order elastic constants using change of cross-sectional resonance frequencies by acoustoelastic effect</div><div class="v">Journal of Applied Physics</div></div></div>
           <div class="ent"><div class="yr">2026</div><div><div class="t">Estimating full stress–strain behavior of cardiac tissues in vivo using physics-informed neural networks</div><div class="v">Revision submitted</div></div></div>
           <div class="ent"><div class="yr">2026</div><div><div class="t">Non-invasive estimation of collagen microstructure and its contribution to cardiac stiffness using a spatio-temporal graph neural network</div><div class="v">Revision submitted</div></div></div>
           <div class="ent"><div class="yr">2026</div><div><div class="t">LLMSurv: an explainable deep survival model for post–lung-transplant survival prediction</div><div class="v">Submitted</div></div></div>
