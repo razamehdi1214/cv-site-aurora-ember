@@ -9,9 +9,9 @@ Single-file static site (`index.html`), served via GitHub Pages.
 ## Design
 
 - Serif/sans typography pairing (Newsreader + Inter, JetBrains Mono for metadata)
-- Restrained single-accent (ember/sienna) palette with full light & dark themes
+- Restrained single-accent (ember/sienna) palette with full light & dark themes; the name and email share one ink color
 - Theme toggle persists to `localStorage` and respects system preference
-- Sticky navigation with scrollspy highlighting the active section
+- Click-to-switch panel navigation — About is the landing; Research, Publications, Talks, Teaching, and Contact each open as their own panel (no infinite scroll)
 - Sub-tab filters for dense publication, talk, and service lists
 - Fully responsive with a mobile menu
 
